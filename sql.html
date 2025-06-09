@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <!--Creating a table-->
+
+        CREATE TABLE students (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        last_name VARCHAR(50) NOT NULL,
+        first_name VARCHAR(50) NOT NULL,
+        email VARCHAR(100) UNIQUE NOT NULL,
+        class VARCHAR(20),
+        age INT CHECK (age >= 5 AND age <= 100) ); <!--Insertion of new data (new students)-->
+
+
+            INSERT INTO students (last_name, first_name, email, class, age) VALUES
+            ('Johnson', 'Emily', 'emily.johnson@university.edu', 'Freshman', 18),
+            ('Williams', 'Michael', 'michael.williams@university.edu', 'Sophomore', 19),
+            ('Brown', 'Sarah', 'sarah.brown@university.edu', 'Junior', 20),
+            ('Davis', 'David', 'david.davis@university.edu', 'Senior', 21),
+            ('Miller', 'Jessica', 'jessica.miller@university.edu', 'Freshman', 18),
+            ('Wilson', 'Robert', 'robert.wilson@university.edu', 'Sophomore', 19),
+            ('Moore', 'Jennifer', 'jennifer.moore@university.edu', 'Junior', 20),
+            ('Taylor', 'Thomas', 'thomas.taylor@university.edu', 'Senior', 22),
+            ('Anderson', 'Lisa', 'lisa.anderson@university.edu', 'Freshman', 17),
+            ('Jackson', 'Daniel', 'daniel.jackson@university.edu', 'Sophomore', 19),
+            ('White', 'Michelle', 'michelle.white@university.edu', 'Junior', 20),
+            ('Harris', 'Christopher', 'christopher.harris@university.edu', 'Senior', 21),
+            ('Martin', 'Amanda', 'amanda.martin@university.edu', 'Graduate', 24),
+            ('Thompson', 'Matthew', 'matthew.thompson@university.edu', 'PhD', 26),
+            ('Garcia', 'Laura', 'laura.garcia@university.edu', 'Freshman', 18),
+            ('Martinez', 'James', 'james.martinez@university.edu', 'Sophomore', 19),
+            ('Robinson', 'Ashley', 'ashley.robinson@university.edu', 'Junior', 20),
+            ('Clark', 'Andrew', 'andrew.clark@university.edu', 'Senior', 21),
+            ('Rodriguez', 'Stephanie', 'stephanie.rodriguez@university.edu', 'Graduate', 23),
+            ('Lewis', 'Nicole', 'nicole.lewis@university.edu', 'PhD', 25);
+
+
+            <!--Reading operation-->
+
+            SELECT * FROM students;
+
+            <!--Search Operation-->
+
+            SELECT * FROM students WHERE last_name = 'Garcia';
+
+            <!--Update Operation-->
+
+            UPDATE students
+            SET email = 'new.email@university.edu'
+            WHERE id = 5;
+
+            <!--Delete Operation-->
+
+            DELETE FROM students WHERE id = 15;
+
+
+
+
+    </div>
+
+</body>
+
+</html>
