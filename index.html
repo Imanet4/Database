@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <!--To create a new database-->
+
+        CREATE DATABASE new_database;
+
+        <!--Creating a Table-->
+
+        USE new_database;
+        CREATE TABLE data (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30),
+        email VARCHAR(80),
+        age INT
+        );
+
+        <!--Inserting data in our table-->
+
+        INSERT INTO data(name, email, age)
+        VALUES
+        ('Dhalia', 'dhalia@gmail.com', 19),
+        ('Eva', 'eva@gmail.com', 23),
+        ('Cecily', 'cecily@gmail.com', 25),
+        ('Annika', 'annika@gmail.com', 18);
+
+
+    </div>
+
+</body>
+
+</html>
