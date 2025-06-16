@@ -34,6 +34,35 @@
         ('Cecily', 'cecily@gmail.com', 25),
         ('Annika', 'annika@gmail.com', 18);
 
+        <!--Discord Ex-->
+
+        <!--Select data where country = 'France'-->
+        SELECT * FROM clients
+        WHERE pays ='France';
+
+        <!-- Filter by age when age is > 30   -->
+
+        SELECT nom, age
+        FROM clients
+        WHERE age > 30;
+        <!--    Ordering by inscription date in descending order  -->
+
+        SELECT * FROM clients
+        ORDER BY inscription DESC;
+
+        <!--   Counting how many people in each country and grouping them   -->
+
+
+        SELECT pays, COUNT(*) AS pays_clients
+        FROM clients
+        GROUP BY pays;
+
+        <!--    Updating country of belgium clients to France      -->
+
+        UPDATE clients
+        SET pays = 'France'
+        WHERE pays = 'Belgique'
+        SELECT * FROM clients;
 
     </div>
 
